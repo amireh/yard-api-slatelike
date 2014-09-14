@@ -1,0 +1,9 @@
+[env]
+.yardoc/
+.yardopts
+
+[assets]
+*.zip
+
+[build]
+*.gem

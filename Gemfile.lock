@@ -1,0 +1,35 @@
+PATH
+  remote: .
+  specs:
+    yard-api (0.1.2)
+      yard (= 0.8.7)
+      yard-appendix (>= 0.1.8)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    diff-lcs (1.2.5)
+    gem-release (0.7.3)
+    rspec (3.1.0)
+      rspec-core (~> 3.1.0)
+      rspec-expectations (~> 3.1.0)
+      rspec-mocks (~> 3.1.0)
+    rspec-core (3.1.2)
+      rspec-support (~> 3.1.0)
+    rspec-expectations (3.1.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.1.0)
+    rspec-mocks (3.1.0)
+      rspec-support (~> 3.1.0)
+    rspec-support (3.1.0)
+    yard (0.8.7)
+    yard-appendix (0.1.8)
+      yard (>= 0.8.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  gem-release
+  rspec
+  yard-api!
