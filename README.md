@@ -37,8 +37,8 @@ end
 
 The plugin comes with two themes out of the box, one that is a mimic of Slate's, and another which follows the same layout but with different colors and a few readability (opinionated) enhancements.
 
-    1. `slate` (default)
-    2. `vroom` (recommended)
+1. `slate` (default)
+2. `vroom` (recommended)
 
 You can specify the theme in your `yard_api.yml` file under the `theme` parameter.
 
