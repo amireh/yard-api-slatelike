@@ -13,7 +13,7 @@ Nothing special except that you have to include the gem in your Gemfile (if usin
 
 group :doc do
   gem 'yard-api'
-  gem 'yard-api-slatelike'slatelike'
+  gem 'yard-api-slatelike'
 end
 ```
 
