@@ -15,3 +15,7 @@ def javascripts
     js/slatelike.js
   ]
 end
+
+def inline_stylesheets
+  super + %w[ _styles ]
+end

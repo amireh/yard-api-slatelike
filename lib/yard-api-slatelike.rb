@@ -27,9 +27,10 @@ module YARD
     TEMPLATE_PATH = File.join(%W[#{ROOT} .. templates])
   end
 
-  require 'yard-api-slatelike/version'
-
   module Templates
     Engine.register_template_path YARD::APISlateLikePlugin::TEMPLATE_PATH
   end
+
+  require 'yard-api-slatelike/version'
+  require 'yard-api-slatelike/options'
 end

@@ -21,6 +21,9 @@ body {
 }
 
 #sidebar h1 {
+  margin-right: 20px;
+}
+.onefile #sidebar h1 {
   margin: 0;
   padding: 0;
   background: #eee;
@@ -30,6 +33,15 @@ body {
 #sidebar h1 a {
   padding: 20px;
   font-size: inherit;
+}
+
+#sidebar h2 {
+  padding: 0 20px;
+  color: #777;
+}
+
+#sidebar h2:first-of-type {
+  margin-top: 20px;
 }
 
 #sidebar a {
@@ -47,7 +59,6 @@ body {
   list-style: none;
   padding-left: 40px;
   margin-left: -20px;
-  width: 260px;
 }
 
 #sidebar .subnav a {
@@ -84,8 +95,9 @@ code {
 }
 
 #sidebar a.active.api_resource_link:after {
-  color: #3498db;
+  color: #ccc;
 }
+
 #sidebar .api_resource_link:after {
   content: "API";
   color: #888;

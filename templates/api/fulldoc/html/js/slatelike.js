@@ -11,13 +11,13 @@ $(function() {
         .replace(/\sAPI$/, '')
         .toLowerCase()
         .replace(/\s+/g, ' ')
-        .replace(/\W+/g, '_')
+        .replace(/\W+/g, '-')
         .trim();
     };
 
     // Make sure all headings have an id so we can anchor to them
     $('#content').find('h1:not([id]), h2:not([id])').each(function() {
-      this.id = ['auto', (++guid), sanitizeText(this.innerText) ].join('_');
+      this.id = [ sanitizeText(this.innerText) ].join('_');
     });
 
     var mainHeaders = $('#content h1[id]').toArray().map(function(h1) {
@@ -37,8 +37,6 @@ $(function() {
         children: subSections.toArray()
       };
     });
-
-    console.log(mainHeaders);
 
     mainHeaders.forEach(function(header) {
       var $subLinks;
@@ -102,18 +100,21 @@ $(function() {
       highlightSection($link.closest('.subnav'));
     };
 
-    $('#content h1').on('scrollSpy:enter', function() {
+    var updateLocation = function(href) {
+      history.pushState(null, null, '#'+href);
+    };
+
+    $('#content h1').on('scrollSpy', function() {
       highlightSection(findSubnav(this));
-      console.log('section:', this.id);
+      updateLocation(this.id);
     });
 
-    $('#content h2').on('scrollSpy:enter', function() {
+    $('#content h2').on('scrollSpy', function() {
       highlightSubsection(findLink(this));
-
-      console.log('sub-section:\t', this.id);
+      updateLocation(this.id);
     });
 
     $('#content h1').scrollSpy();
-    $('#content h2').scrollSpy();
+    $('#content h2').scrollSpy({ defer: 0 });
   }(this));
 });
