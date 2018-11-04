@@ -1,5 +1,5 @@
 def stylesheets
-  theme = case api_options.theme
+  theme = case api_options.theme.downcase
   when 'vroom'
     'css/vroom.css'
   when 'default', 'slate', 'slatelike'
