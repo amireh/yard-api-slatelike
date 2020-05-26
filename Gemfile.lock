@@ -1,9 +1,9 @@
 PATH
   remote: .
   specs:
-    yard-api-slatelike (0.2.0)
-      yard (= 0.8.7)
-      yard-api
+    yard-api-slatelike (0.3.0)
+      yard (>= 0.8.7, < 1.0.0)
+      yard-api (>= 0.1.2, < 2.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -22,9 +22,9 @@ GEM
     rspec-mocks (3.1.0)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.0)
-    yard (0.8.7)
-    yard-api (0.1.8)
-      yard (= 0.8.7)
+    yard (0.9.25)
+    yard-api (1.1.1)
+      yard (~> 0.9.15)
       yard-appendix (~> 0.1.8)
     yard-appendix (0.1.8)
       yard (>= 0.8.0)
@@ -36,3 +36,6 @@ DEPENDENCIES
   gem-release
   rspec
   yard-api-slatelike!
+
+BUNDLED WITH
+   1.17.3
